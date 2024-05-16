@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The Google Effect</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css" > 
+
+</head><!---->
+<body>
+   <!--this is the website's background music-->
+   <audio controls autoplay loop > 
+      <source src="Clint Eastwood (Instrumental).mp3" 
+      type="audio/mpeg" class="backgroundMusic">
+   Your browser does not support the audio element.       
+   </audio>
+
+   <style>
+    body {
+      /* Creates a linear-gradient background between red, orange, skyblue and blue*/
+      background: linear-gradient(-85deg, red, orange, skyblue, blue);
+        /* makes the background 4 times the size of the body */
+      background-size: 100% 100%;
+      animation: gradientAnimation 10s infinite linear;
+    }
+    
+    /* 
+       This simply moves the position of the background around the body to
+       give the impression of the shifting colour tones.
+    */
+    @keyframes gradientAnimation {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+    }
+   /*the following is the css styling for all the text on the website*/
+      h1 {          
+	      color: black;
+	      font-family: "Arial";
+	      text-transform: uppercase;
+	      opacity: 1;
+	      font-size: 120px; 
+         text-align: center;
+      }
+
+      h3 {
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+         font-weight: lighter;
+         font-size: 26px;
+         color:blue; 
+      }
+
+      h33 {
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+         font-weight: lighter;
+         font-size: 26px;
+         color: blueviolet;
+      }
+
+      p {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-weight: 400;
+         font-size: 20px;
+         color: #fff;
+         text-align: left;
+      }
+
+      h4 {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-weight: 1000;
+         font-size: 30px;
+         color: #fff;
+         text-align: center;
+      }
+
+      h5 {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-weight: 1000;
+         font-size: 30px;
+         color: #fff; 
+         text-align: center;
+      }
+
+      h6 {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-weight: 1000;
+         font-size: 30px;
+         color: #fff; 
+         text-align: center;
+      }
+
+      h2 {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-weight: 1000; 
+         font-size: 30px;
+         color: #fff;
+         text-align: center;
+         text-transform: capitalize;
+         text-transform: uppercase;
+      }
+
+      b2 {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-weight: 1000;
+         font-size: 30px;
+         color: #000000; 
+         text-align: center;
+      }
+   /*the following is styling for all the sections that have columns*/
+      .transactiveMemory {
+         column-count: 2;
+      }
+
+      .digitalAmnesia {
+         column-count: 3;
+      }
+
+      .searchEfficiency {
+         column-count: 3;
+      }
+
+      .PageRank {
+         column-count: 4;
+      }
+
+      .irl {
+        column-count: 2;
+      }
+   /*the following is the styling for every image on the website*/
+      img.googlelogo {
+         display:block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 80%; 
+      }
+
+      img.mousepointer2 {
+         display:block;
+         position: absolute;
+         margin-left: 15%;
+         margin-right: auto;
+         margin-top: 0.4%; /*this line ensures the mouse pointer appears on 
+         the purple text*/
+         width: 75px; 
+      }
+
+      img.brain {
+         display:block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 50%;                 
+      }
+
+      img.pixels {
+         display:block;
+         width: 500px;
+      }
+
+      img.eraser {
+         display: inline-block;
+         width: 800px;
+      }
+
+      img.barchart {
+         width: 800px;
+      }
+
+      img {
+         display:block;
+         margin-left: auto;
+         margin-right: auto;
+         width: 50%; 
+      }
+
+      img.catImage {
+         display: flex;
+         width:max-content; 
+      }
+
+      .container {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+      }
+
+      img.bounce {
+         width: 1500px; 
+         height: auto;
+         cursor: pointer;
+      }
+
+      img.brain {
+         width: 1100px;
+         left: 10%;
+         right: 10%;
+         top: -30%;
+      }
+   
+      /* this is the Animation for the google search bar*/
+      @keyframes bounceAnimation {
+      50%, 100% {
+         transform: translateY(0);
+      }
+      50% {
+         transform: translateY(-300px);
+      }
+      50% {
+         transform:scale(-10%); /*this specific animation is what causes the 'spinning' effect*/
+      }
+     }
+
+      .bounce {
+         animation: bounceAnimation 3s ease infinite; /*this controls the speed of the animation effects*/
+      }
+
+   /*this is the animation of the transparent brain*/
+      @keyframes brainAnimation {
+         50%, 100% {
+            transform: translate3d(-2);
+         }
+         50% {
+            transform: scaleX(-80%); /*this is the specific animation for the 'side-to-side' movement on the X axis of the image*/
+         }
+      }
+
+      .brain {
+         animation: brainAnimation 3s ease infinite; /*this controls the speed of the movement*/
+      }
+
+            /*the following code is for the overlapping of both the tarnsparent
+      and the glowing brain images at the same position*/
+      .brainGlow {
+         position: relative;
+      }
+
+      .brain, .brain {
+         position: absolute;
+         top: 0;
+         left: 25%; 
+      }
+
+      /*this is the styling for the text within the link buttons
+      beneath the search bar */
+      a {
+         padding: 10px 10px;
+         display: inline-block;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-size: 50px;
+      }
+     
+      /*this is the styling for the buttons and the positions of the 
+      buttons beneath the search bar*/
+      button {
+         width: 250px;
+         height: 60px;
+         margin-left: auto;
+         margin-right: auto;
+         border-radius: 2px;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-size: 30px;
+         text-align: center;
+         position: relative;
+         top: -1000000%;
+         left: 250%;
+         transform: translate(-50%, -50%)
+      }
+   </style>
+
+   <script>
+   //the folloing JavaScript is responsible for the 'clickable' element of the google searchbar animation//
+      document.addEventListener('DOMContentLoaded', function() {
+   const image = document.querySelector('.bounce');
+ 
+   image.addEventListener('click', function() {
+     // Toggle animation class to reset animation
+     this.classList.remove('bounce');
+     void this.offsetWidth; // Trigger reflow
+     this.classList.add('bounce');
+   });
+ });
+   </script>
+ <!---animate just google it -----> 
+<h1>THE <img src="googlelogo.png" class="googlelogo">EFFECT</h1>
+<p>created by Amina Nuhu</p>
+   <hr>
+<h4>Which are you more likely to say “Search it up” or “Google it”?</h4>
+   <hr>
+<h5> Need to find the definition of 'cirmcumspect'?, what's a dictionary?, 
+   just <b2>Google it</b2>. Want to know Harrison Ford's age?, just <b2>Google it</b2>. Best 
+   coffee shops near you?,<b2>Google it</b2>. Looking for the best bargain 
+   plane tickets?,<b2>JUST GOOGLE IT</b2></h5> 
+   <hr>
+<h6>Google's dominance has seen it move from a humble web surfer to a literal 
+   verb; an omniscient entity in its own right.</h6>
+   <hr>
+<h2><b>But why is 'google' synonymous with 'search'?</b></h2> 
+   <hr>
+
+   <!---the folloing code is the searchbar----->
+   <div class="container">
+      <img src="searchbar.png" alt="Image" class="bounce"> <!--class for css styling-->
+    </div>
+    <script src="script.js"></script> <!--calling JavaScript to make the searchbar clickable-->
+
+   <!--the folloing code are the link buttons below the searchbar, similar to what you will find on the Google homepage-->
+   <div>
+   <a href="https://www.google.com" class="button"> 
+      <button>Google Search</button>
+   </a> 
+
+   <a href="https://doodles.google/doodle/celebrating-50-years-of-kids-coding/" class="button"> 
+      <button>I'm Feeling Lucky </button>
+   </a>
+   </div>
+
+<div>
+<h3><u>Beginnings of the Internet</u></h3>
+<p>Upon the birth of the internet, information was quite sparse and generally accessible via 
+   different libraries and specialised databases and archives. Technical experience, expertise 
+   and specialist knowledge would often be demanded, as well as efficient, when it came to 
+   retrieving specific information, as the internet remained constrained at this time.</p>
+</div>
+
+<div>
+<h3><u>The Inception of Search Engines</u></h3>
+<p>The World Wide Web, created by Tim Berners-Lee saw immense proliferation in the 1990s. 
+   To aid the navigation of this complex, accumulating information system, search engines 
+   such as Yahoo, AltaVista and Lycos emerged. These popular early search engines held the 
+   capabilities of indexing web pages based on keyword prompts and other rudimentary algorithms, 
+   thus creating a digital encyclopaedia.</p>
+</div>
+
+<div> 
+<h3><u>Google's Introduction to the World and its Effect on Online Searching</u></h3>
+<p>In 1998, came along Google. Google was founded by American computer scientists Larry Page and 
+   Sergey Brin while they studied for their PhDs at Stanford University in California. Google 
+   brought about a swift revolution and alteration in online searching.</p>
+   
+   <img src="googlefounders.jpeg">
+   <img src="googlehq.webp">
+
+   <p><b>Google’s PageRank Algorithm</b></p>
+   <p>Google's PageRank algorithm is a method used by Google Search to rank web pages in their 
+      search engine results. It works by analysing the links between pages to determine their 
+      relevance and importance. Overall, PageRank aims to prioritise web pages based on their 
+      importance and relevance, as indicated by the links they receive from other pages. 
+      However, it's just one of many factors that Google's search algorithm considers when 
+      ranking pages</p>
+      <a href="https://www.link-assistant.com/news/google-pagerank-algorithm.html">
+         <b>click here for a deeper dive into Google's PageRank Algorithm</b></a>
+
+      <p>But what does this have to do with the google effect?</p>
+</div>
+
+<div class="PageRank"> <!--calling class for css styling-->
+   <p><b>Relevance and Authority</b> - PageRank evaluates the relevance and authority of web pages based 
+   on the links they receive from other pages. Pages with higher PageRank scores are considered 
+   more relevant and authoritative. When users search for information, Google's algorithm presents 
+   them with pages that it deems most relevant and credible based on PageRank.  
+   
+   <b>Information Retrieval</b> of PageRank, users often find the most relevant and trustworthy 
+   information at the top of Google search results. This leads to a reliance on Google as a source of 
+   information, as users trust that the top-ranked results are likely to fulfil their informational needs.
+
+   <b>Cognitive Offloading</b> - The availability of vast amounts of information at our fingertips through Google 
+   reduces the need to retain information in our memory. Instead of remembering specific facts or details, people 
+   are more inclined to rely on Google to retrieve information when needed. This reliance on external sources for 
+   information retrieval is a key aspect of the Google effect.
+
+   <b>Selective Attention</b> - Users tend to focus on the top few search results displayed by Google, often ignoring
+   lower-ranked results. This selective attention reinforces the authority of top-ranked pages and further 
+   contributes to the Google effect by shaping users' perceptions and understanding of topics based on the 
+   information presented at the top of search results.</p>
+</div>
+<hr>
+
+<div>
+   <img src="mousepointer2.png" class="mousepointer2"> <!--calling class for css styling-->
+<h33><u>Google's Influence on Human Cognition </u></h33>
+   
+<div class="brainGlow">  <!--calling class for css styling and animation-->
+<img src="brain.png" alt="brain" class="brain">
+<img src="glow.png" alt="glow" class="glow">
+</div>
+
+<div class="transactiveMemory"> <!--calling class for css styling-->
+<p><b>Transactive Memory</b></p>
+   <p>Computers have become a part of our transactive memory. Transactive memories are useful in 
+   social groups where individuals of a certain expertise possess information that another member 
+   of the same group might lack. In short, we rely on external sources to remember information. 
+   This individual, however, due to his own expertise in a different subject, might possess 
+   information the former individuals might lack. Studies have consistently shown that information 
+   learned through the Internet is recalled with less accuracy and confidence, as compared to 
+   learning through a hardcover book.</p> 
+   <img src="pixels.jpg" class="pixels">
+</div>
+  
+<div class="digitalAmnesia">   <!--calling class for css styling-->
+   <img src="eraser.jpg">
+<p><b>Digital Amnesia</b></p> 
+   <p>Google is responsible for a reliance on easily accessible information, which subsequently 
+   causes a lack of memory retention, along with an inclination to quickly forget information. 
+   This has had a huge impact on the internet for a plethora of reasons and is known as 
+   “the google effect”.</p>
+   <img src="android.jpg">
+</div>
+
+<div class="searchEfficiency"> <!--calling class for css styling-->
+<p><b>Search Efficiency</b></p>
+   <p>The efficiency of Google search due to quick and easy accessibility means there is less 
+   incentive for people to memorise information. Rather than retaining information, people 
+   are focusing on development of skills to easily find and assess information online.
+   <img src="laptopflamegif.gif">
+   This stark shift had a great effect on human cognition, in relation to how people 
+   approach the acquisition of knowledge.</p>
+</div>
+<h3><u>The Google Effect in Real Life| the changed trajectory of life and technology</u></h3>
+<div class="irl">    <!--calling class for css styling-->
+<p><b>Education and Learning</b></p>
+<p>Educational approaches have evolved to emphasise critical thinking, problem-solving, 
+   and information literacy, rather than rote memorization. Students are taught how to 
+   navigate the internet and assess the credibility of sources.</p>
+<p><b>Information Overload, Overconsumption and Misinformation</b></p>
+<p>The reliance on search engines has led to information overload, with vast amounts 
+   of content available online. This abundance of information also raises concerns about 
+   misinformation and the need for effective fact-checking.</p>
+<p><b>Privacy, Data Security and Algorithms</b></p>
+<p> As people rely on the internet for information, issues of privacy and data 
+   security become more critical. Personal information can be used to 
+   tailor search results.</p>
+   <img src="barchart.gif" class="barchart"> 
+</div>
+      <img src="pixeldeskcat.gif" class="catImage"> <!--calling class for css styling-->
+</body>
+</html>
+
